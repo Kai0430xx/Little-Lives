@@ -1,0 +1,16 @@
+{
+  "name": "小小人生 Little Lives",
+  "short_name": "小小人生",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f7f1",
+  "theme_color": "#f6f3e9",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
