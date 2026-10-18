@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1,viewport-fit=cover"
+  >
+
+  <meta name="theme-color" content="#f6f3e9">
+
+  <meta
+    name="apple-mobile-web-app-capable"
+    content="yes"
+  >
+
+  <link
+    rel="manifest"
+    href="/manifest.webmanifest"
+  >
+
+  <link rel="icon" href="/icon.svg">
+  <link rel="stylesheet" href="/style.css">
+
+  <title>小小人生 Little Lives</title>
+</head>
+
+<body>
+  <header>
+    <a class="brand" href="/">
+      ♧
+      <span>
+        小小人生
+        <small>LITTLE LIVES</small>
+      </span>
+    </a>
+
+    <div class="top">
+      <span id="wallet">
+        一點陪伴，慢慢長大
+      </span>
+
+      <button id="account">旅人</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <span class="eyebrow">
+          OUR LITTLE CORNER OF THE WORLD
+        </span>
+
+        <h1 id="home-title">
+          暖陽小院 <span>☀</span>
+        </h1>
+
+        <p>
+          把日子過得慢一點，把陪伴留得多一點。
+        </p>
+      </div>
+
+      <button id="invite">
+        ↗ 邀請朋友
+      </button>
+    </section>
+
+    <div class="layout">
+      <section>
+        <nav>
+          <button
+            class="active"
+            data-tab="yard"
+          >
+            ⌂ 小院
+          </button>
+
+          <button data-tab="farm">
+            ♧ 農田
+          </button>
+
+          <button data-tab="pond">
+            ♒ 池塘
+            <small>尚未開放</small>
+          </button>
+
+          <span id="members">
+            最多 5 位好朋友
+          </span>
+        </nav>
+
+        <div id="scene" class="scene">
+          <div class="cloud c1"></div>
+          <div class="cloud c2"></div>
+          <div class="sun">☀</div>
+
+          <div class="scene-label">
+            ☀ 午後的小日子
+            <small>
+              微風輕輕，適合一起玩耍
+            </small>
+          </div>
+
+          <div class="fence"></div>
+          <div class="path"></div>
+
+          <div class="tree t1">🌳</div>
+          <div class="tree t2">🌳</div>
+
+          <div class="flower f1">
+            🌼 🌷
+          </div>
+
+          <div class="flower f2">
+            🌷 🌼
+          </div>
+
+          <div id="world"></div>
+
+          <button
+            id="create-pet"
+            class="primary scene-create"
+          >
+            ＋ 迎接我的小夥伴
+          </button>
+
+          <div class="scene-note">
+            ✦ 在這裡，每一個小生命都被好好珍惜。
+          </div>
+        </div>
+
+        <div
+          id="pet-panel"
+          class="card welcome"
+        >
+          <span>🐾</span>
+
+          <div>
+            <h3>
+              小小的陪伴，大大的幸福
+            </h3>
+
+            <p>
+              點一下院子裡的寵物，
+              看看牠今天過得好不好。
+            </p>
+          </div>
+        </div>
+
+        <div class="bottom-grid">
+          <section class="card">
+            <h3>
+              💬 小院聊天室
+              <small>
+                一起聊聊今天吧
+              </small>
+            </h3>
+
+            <div
+              id="messages"
+              class="messages"
+            >
+              歡迎回家！和朋友打聲招呼吧。
+            </div>
+
+            <form id="chat">
+              <input
+                name="text"
+                placeholder="留下一句溫暖的話…"
+                maxlength="200"
+              >
+
+              <button>➤</button>
+            </form>
+          </section>
+
+          <section class="card shop">
+            <h3>🧺 小院雜貨舖</h3>
+
+            <p>
+              照顧小夥伴，
+              從一頓飽飯開始。
+            </p>
+
+            <div class="shop-item">
+              <span>🌾</span>
+
+              <div>
+                <b>低級飼料</b>
+                <small>
+                  恢復 ⅓ 體力
+                </small>
+              </div>
+
+              <button id="buy">
+                🪙 6 購買
+              </button>
+            </div>
+
+            <small>
+              中高級飼料、家具與更多玩具籌備中
+            </small>
+          </section>
+        </div>
+      </section>
+
+      <aside>
+        <section class="card">
+          <div class="section-title">
+            <h3>
+              ✧ 今日的小目標
+            </h3>
+
+            <span>每日</span>
+          </div>
+
+          <p class="sub">
+            小小努力，也是美好的一天。
+          </p>
+
+          <div id="tasks"></div>
+
+          <div class="task-footer">
+            台灣時間每日 00:00 更新
+          </div>
+        </section>
+
+        <section
+          class="card cooperation"
+        >
+          <span class="eyebrow">
+            BETTER TOGETHER
+          </span>
+
+          <h3>
+            一起，讓小院長大 🌱
+          </h3>
+
+          <p>
+            和朋友一起照顧寵物，
+            解鎖屬於大家的小農田。
+          </p>
+
+          <div class="progress">
+            <i id="care-progress"></i>
+          </div>
+
+          <p id="care-text">
+            共同完成 5 次餵食
+          </p>
+
+          <button id="unlock">
+            查看家園合作目標 →
+          </button>
+        </section>
+
+        <section class="card notice">
+          <h3>✉ 小院佈告欄</h3>
+
+          <p>
+            每個家園最多 5 位朋友，<br>
+            每個小夥伴都有自己的家。
+          </p>
+
+          <p>
+            記得回家餵食。
+            24 小時未餵食會生病，
+            48 小時後會離家。
+          </p>
+
+          <small>
+            手機推播尚未啟用，
+            請自行留意照顧時間。
+          </small>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      小小人生 · LITTLE LIVES
+
+      <span>
+        和喜歡的人，
+        一起照顧小小的日常。
+      </span>
+    </footer>
+  </main>
+
+  <dialog id="modal">
+    <form id="modal-form">
+      <div id="modal-content"></div>
+    </form>
+  </dialog>
+
+  <div id="toast" role="status"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
