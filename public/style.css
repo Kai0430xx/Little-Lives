@@ -1,0 +1,766 @@
+@import url(
+  'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap'
+);
+
+:root {
+  --green: #47745a;
+  --ink: #394d40;
+  --muted: #8b9588;
+  --line: #e7e9dd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f8f7f1;
+  color: var(--ink);
+  font: 14px 'Noto Sans TC', sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid var(--line);
+  background: #fffefa;
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+button:hover {
+  background: #edf2e5;
+}
+
+button:disabled {
+  opacity: .5;
+  cursor: default;
+}
+
+header {
+  height: 88px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 max(5vw, 20px);
+  background: #fffdf7;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  font-size: 34px;
+  color: var(--green);
+  text-decoration: none;
+  align-items: center;
+}
+
+.brand span {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.brand small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 4px;
+  margin-top: 3px;
+}
+
+.top {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  font-size: 12px;
+}
+
+main {
+  max-width: 1440px;
+  margin: auto;
+  padding: 32px 5vw;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px 0 28px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #98a58b;
+}
+
+h1 {
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+h1 span {
+  color: #d7b961;
+  margin-left: 12px;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+h3 {
+  font-size: 15px;
+  margin: 0 0 12px;
+}
+
+h3 small {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 400;
+  margin-left: 12px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr) 290px;
+  gap: 24px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+nav button {
+  border: 0;
+  background: transparent;
+}
+
+nav .active {
+  background: #e4ecdd;
+  color: var(--green);
+  font-weight: 600;
+}
+
+nav small {
+  font-size: 9px;
+  color: #9ca18e;
+}
+
+nav > span {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.scene {
+  height: 440px;
+  position: relative;
+  overflow: hidden;
+  border: 5px solid #fff;
+  border-radius: 20px;
+  background: linear-gradient(
+    #dfeee2 0%,
+    #eaf1d5 43%,
+    #c9dda6 44%,
+    #b7ce8c 100%
+  );
+  box-shadow: 0 4px 18px #34492608;
+}
+
+.sun {
+  position: absolute;
+  right: 12%;
+  top: 22px;
+  font-size: 56px;
+  color: #e7cb75;
+}
+
+.cloud {
+  position: absolute;
+  width: 90px;
+  height: 20px;
+  background: #fff9;
+  border-radius: 50%;
+  top: 32px;
+}
+
+.c1 {
+  left: 30%;
+}
+
+.c2 {
+  left: 58%;
+  top: 70px;
+}
+
+.scene-label {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  font-size: 12px;
+  color: #647c5b;
+}
+
+.scene-label small {
+  display: block;
+  font-size: 10px;
+  margin-top: 6px;
+}
+
+.fence {
+  position: absolute;
+  top: 40%;
+  height: 30px;
+  width: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0 20px,
+    #ebddba 20px 28px,
+    transparent 28px 40px
+  );
+  border-bottom: 7px solid #e6d7af;
+  border-top: 5px solid #e6d7af;
+}
+
+.path {
+  position: absolute;
+  bottom: -20%;
+  left: 30%;
+  width: 32%;
+  height: 65%;
+  border-radius: 50%;
+  background: #e6dcb2;
+  transform: rotate(-22deg);
+  opacity: .8;
+}
+
+.tree {
+  position: absolute;
+  font-size: 110px;
+  top: 22%;
+  filter: saturate(.6);
+}
+
+.t1 {
+  left: -35px;
+}
+
+.t2 {
+  right: -25px;
+}
+
+.flower {
+  position: absolute;
+  bottom: 42px;
+  font-size: 26px;
+}
+
+.f1 {
+  left: 8%;
+}
+
+.f2 {
+  right: 8%;
+}
+
+.scene-note {
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  width: 100%;
+  font-size: 10px;
+  color: #617447;
+}
+
+.primary {
+  background: var(--green);
+  color: white;
+  border: 0;
+}
+
+.scene-create {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.card {
+  background: #fffefa;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 18px;
+}
+
+.welcome {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.welcome > span {
+  font-size: 34px;
+  background: #f1f0dc;
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.welcome p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.welcome h3 {
+  margin-bottom: 7px;
+}
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 18px;
+}
+
+.messages {
+  height: 110px;
+  overflow: auto;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #82917c;
+}
+
+input,
+select {
+  background: #f9f8f2;
+  border: 1px solid var(--line);
+  padding: 12px;
+  border-radius: 9px;
+  color: var(--ink);
+  width: 100%;
+}
+
+form#chat {
+  display: flex;
+  gap: 8px;
+}
+
+.shop-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 0;
+}
+
+.shop-item > span {
+  font-size: 30px;
+}
+
+.shop-item small {
+  display: block;
+}
+
+.shop-item button {
+  margin-left: auto;
+  font-size: 12px;
+}
+
+.shop small {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-title > span {
+  font-size: 10px;
+  color: #a18d60;
+  background: #f5efdb;
+  height: 24px;
+  padding: 4px 9px;
+  border-radius: 8px;
+}
+
+.sub {
+  font-size: 11px;
+  margin-top: 0;
+}
+
+.task {
+  display: flex;
+  gap: 10px;
+  padding: 14px 0;
+  border-bottom:
+    1px dashed var(--line);
+  font-size: 12px;
+}
+
+.task > span {
+  font-size: 20px;
+}
+
+.task b {
+  font-weight: 500;
+  display: block;
+}
+
+.task small {
+  color: #a3a68f;
+  font-size: 10px;
+}
+
+.task em {
+  margin-left: auto;
+  font-size: 11px;
+  font-style: normal;
+  color: #9fa58e;
+}
+
+.task-footer {
+  font-size: 10px;
+  color: #a3aa99;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.cooperation {
+  background: #edf1e4;
+}
+
+.cooperation h3 {
+  margin-top: 12px;
+}
+
+.cooperation p,
+.notice p {
+  font-size: 12px;
+}
+
+.progress {
+  height: 7px;
+  background: #dce3cf;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.progress i {
+  display: block;
+  height: 100%;
+  background: #92ac75;
+  width: 0;
+}
+
+.cooperation button {
+  width: 100%;
+  font-size: 11px;
+  background: #fff8;
+}
+
+.notice {
+  background: #f7f2e5;
+}
+
+.notice small {
+  font-size: 10px;
+  color: #9e8e75;
+}
+
+footer {
+  font-size: 10px;
+  color: #a5ac9a;
+  letter-spacing: 1px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+  margin-top: 20px;
+}
+
+footer span {
+  float: right;
+  letter-spacing: 0;
+}
+
+.house {
+  position: absolute;
+  width: 90px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.roof {
+  width: 94px;
+  height: 44px;
+  background: #a87555;
+  clip-path: polygon(
+    50% 0,
+    100% 100%,
+    0 100%
+  );
+  margin-left: -2px;
+}
+
+.hut {
+  background: #dcb98b;
+  border: 3px solid #c8a278;
+  width: 76px;
+  height: 61px;
+  margin: auto;
+  border-radius: 0 0 5px 5px;
+  position: relative;
+  box-shadow: 0 6px 0 #7b92532b;
+}
+
+.hut b {
+  position: absolute;
+  top: -10px;
+  left: 8px;
+  right: 8px;
+  font-size: 10px;
+  border-radius: 4px;
+  background: #fff4dc;
+  padding: 4px;
+}
+
+.door {
+  background: #826443;
+  width: 31px;
+  height: 37px;
+  border-radius: 20px 20px 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+}
+
+.animal {
+  font-size: 48px;
+  position: relative;
+  margin-top: 3px;
+  filter:
+    drop-shadow(0 4px 1px #60764230);
+  transition: transform .2s;
+}
+
+.animal:hover {
+  transform:
+    rotate(-8deg) scale(1.1);
+}
+
+.waste {
+  font-size: 20px;
+  padding: 3px;
+  background: transparent;
+  border: 0;
+}
+
+.toy {
+  position: absolute;
+  bottom: 55px;
+  left: 20%;
+  font-size: 25px;
+}
+
+.pet-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  margin: 12px 0;
+}
+
+.plots {
+  position: absolute;
+  inset: 130px 12% 55px;
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+  gap: 14px;
+}
+
+.plot {
+  background: #ae8860;
+  border: 5px solid #c19a70;
+  border-radius: 18px;
+  font-size: 30px;
+}
+
+.plot small {
+  display: block;
+  font-size: 10px;
+  color: white;
+}
+
+dialog {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 28px;
+  max-width: 440px;
+  width: 92%;
+  color: var(--ink);
+}
+
+dialog::backdrop {
+  background: #24382b66;
+  backdrop-filter: blur(3px);
+}
+
+dialog h2 {
+  margin: 0 0 12px;
+}
+
+dialog p {
+  font-size: 13px;
+}
+
+dialog label {
+  display: block;
+  font-size: 12px;
+  margin: 12px 0;
+}
+
+dialog button {
+  margin: 12px 5px 0 0;
+}
+
+#toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #394d40;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 12px;
+  display: none;
+  z-index: 10;
+}
+
+.move-controls {
+  position: absolute;
+  top: -28px;
+  white-space: nowrap;
+  left: -20px;
+}
+
+.move-controls button {
+  padding: 4px 8px;
+  font-size: 10px;
+}
+
+@media (max-width: 1000px) {
+  .layout {
+    grid-template-columns:
+      1fr 250px;
+    gap: 14px;
+  }
+
+  main {
+    padding: 25px 20px;
+  }
+
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scene {
+    height: 420px;
+  }
+}
+
+@media (max-width: 720px) {
+  header {
+    height: 74px;
+    padding: 0 18px;
+  }
+
+  .brand span {
+    font-size: 18px;
+  }
+
+  .top > span {
+    display: none;
+  }
+
+  .layout {
+    display: block;
+  }
+
+  aside {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .intro h1 {
+    font-size: 25px;
+  }
+
+  .intro p {
+    font-size: 11px;
+  }
+
+  .eyebrow {
+    font-size: 8px;
+  }
+
+  .intro > button {
+    font-size: 11px;
+    padding: 9px;
+  }
+
+  main {
+    padding: 24px 14px;
+  }
+
+  .scene {
+    height: 430px;
+  }
+
+  nav > span {
+    display: none;
+  }
+
+  nav button {
+    padding: 10px 12px;
+  }
+
+  .house {
+    transform: scale(.8);
+    transform-origin: top left;
+  }
+
+  .stats {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  footer span {
+    float: none;
+    display: block;
+    margin-top: 8px;
+  }
+
+  .bottom-grid {
+    gap: 0;
+  }
+}
